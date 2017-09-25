@@ -3,4 +3,5 @@ rect(200,200,50,50,3,10,20,40);
 rectMode(CORNERS);
 rect(0,0,200,200);
 rectMode(CENTER);
+strokeWeight(10);
 rect(300,100,100,100,50);
