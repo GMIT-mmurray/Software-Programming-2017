@@ -21,4 +21,6 @@ void draw() {
   x = x+1 ;
   y1 = y1-1 ;
   x1 = x1-1 ;
+  
+  println("x= ",x," y= ",y, "x1= ",x1,"y1=  ",y1);
 }
