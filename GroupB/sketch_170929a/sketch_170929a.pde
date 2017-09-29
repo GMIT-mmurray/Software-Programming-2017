@@ -1,0 +1,25 @@
+
+int x1 = 475;
+int y1 = 475;
+
+void setup() {
+  size(500, 500);
+  frameRate(60);
+//  background(#151AD3);
+}
+
+void draw() {
+  background(#151AD3);
+
+  fill(#26EA3B);
+  ellipse(x1, y1, 50, 50);
+  fill(#E81C1C);
+  ellipse(x1, y1-50, 50,50);
+  fill(#1CE8B6);
+  ellipse(x1-50, y1, 50,50);
+  
+  x1 = x1-1;
+  y1 = y1-1;
+
+  println("x1= ",x1,"y1=  ",y1);
+}
