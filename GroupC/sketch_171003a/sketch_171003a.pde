@@ -15,7 +15,7 @@ void draw() {
     rect(width/2, height/2, 100, 100);
   }
   line(x, height, x, 0);
-  x = x+d;
+  x =  x+d;
   //Method 1
   /*  if (x > width) {
    d = d*-1;
