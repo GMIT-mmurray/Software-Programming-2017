@@ -11,10 +11,19 @@ void draw () {
   background(#3619E3);
  
   if (keyPressed == true) {
-    if (key == 'b') {
-      // moves the ball in both x and y axis
-      x = x+dx;
-      y = y+dy;
+    if (key == CODED) {
+      if (keyCode == UP){
+       y = y-dy;
+      }
+      if (keyCode == DOWN){
+       y = y+dy; 
+      }
+      if (keyCode == RIGHT) {
+       x = x+dx; 
+      }
+      if (keyCode == LEFT) {
+       x =x-dx; 
+      }
     }
   }
 
