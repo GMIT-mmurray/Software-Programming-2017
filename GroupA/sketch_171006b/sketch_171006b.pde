@@ -1,18 +1,27 @@
-int x = 25;
-int d = 1;
+int y = 200;
+int dx = 10;
+int dy = 10;
+int ballSize = 100;
+int ballRadius = ballSize/2;
+int x = ballRadius;
+
 
 void setup() {
-  size(400, 400);
+  size(500, 500);
 }
 
 void draw() {
   background(#153ACB);
-  // Move x
-  x = x+d;
- 
+  // Move x and y
+  x = x+dx;
+  y = y+dy;
+
   // Method 2
-  if ((x >=width-25) || (x<=25)) {
-    d = d*-1;
+  if ((x >=width-ballRadius) || (x<=ballRadius)) {
+    dx = dx*-1;
+  }
+  if ((y >= height-ballRadius) || (y<=ballRadius)) {
+    dy = dy*-1;
   }
 
   if (x < width/2) {
@@ -25,5 +34,5 @@ void draw() {
   }
   //draw the line
   fill(#ED2644);
-  ellipse (x, height/2, 50, 50);
+  ellipse (x,y, ballSize, ballSize);
 }
