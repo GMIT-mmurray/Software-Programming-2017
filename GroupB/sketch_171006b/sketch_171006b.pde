@@ -38,3 +38,8 @@ void draw () {
 
   println(" x=", x, "  dx=", dx, " Y=",y, " dy= ",dy);
 }
+
+
+void keyPressed() {
+  println(" Key Pressed Test");
+}
