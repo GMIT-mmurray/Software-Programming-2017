@@ -26,7 +26,13 @@ void draw() {
         y = y-dy;
       }
       if (keyCode == DOWN) {
-       y = y+dy; 
+        y = y+dy;
+      }
+      if (keyCode == RIGHT) {
+        x = x+dx;
+      }
+      if (keyCode == LEFT) {
+        x = x-dx;
       }
     }
   }
