@@ -13,7 +13,6 @@ void setup() {
 } 
 
 void draw() {
-
   image(img1, 0, 0, 400, 400);
   image(img2, 400, 0, 400, 400);
   image(img3, 0, 400, 400, 400);
