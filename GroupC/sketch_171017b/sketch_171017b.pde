@@ -1,4 +1,6 @@
 String myString;
+String location;
+String dispTime;
 PFont myFont;
 
 void setup() {
@@ -26,4 +28,9 @@ void draw() {
   textSize(20);
   fill(#E81010);
   text(myString,mouseX,mouseY);
-}
+  fill(#343CB9);
+  location = "Cursor Location: " + mouseX + "::" + mouseY;
+  text(location,width/2,height/2);
+  dispTime = "Time-> " + hour() + ":" + minute() + ":" + second();
+  text(dispTime,width/2,(height/2) + 45);
+ }
