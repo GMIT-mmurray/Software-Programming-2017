@@ -56,5 +56,13 @@ void draw () {
   textSize(25);
   fill(#E5194D);
   text(myString, width/2, height/2);
+  
+  String location = "Cursor Location: " + x + ":::" + y; 
+  text(location,width/3,height/4);
+ 
+  String dispTime = "Time-> " + hour() + ":" + minute() + ":"  + second();  
+  text(dispTime,width/3,(height/4) + 45);
+
+  
   println(" x=", x, "  dx=", dx, " Y=", y, " dy= ", dy);
 }
