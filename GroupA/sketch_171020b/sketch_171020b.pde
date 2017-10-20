@@ -1,6 +1,6 @@
 int y = 200;
-int dx = 10;
-int dy = 10;
+int dx = 2;
+int dy = 3;
 int ballSize = 100;
 int ballRadius = ballSize/2;
 int x = ballRadius;
@@ -50,6 +50,14 @@ void draw() {
   if ((x>width/2) && (y>height/2)) {
     myString = " LR ";
   }
+
+  fill(#32F216);
+  String location = "Cursor Location: " + x + "::::" + y; 
+  text(location, width/4, height/4);
+
+  String dispTime = "Time-> " + hour() + ":" + minute() + ":" + second();  
+  text(dispTime, width/4, (height/4) + 45);
+
 
   textFont(myFont);
   textAlign(CENTER);
