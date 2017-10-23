@@ -18,14 +18,14 @@ void draw() {
   pushMatrix();
   rotate(radians(20));
   //tint(second() * 4,second() * 4,second() * 4); 
-  image(img1, 0, 0, width/2,height/2);
+  image(img1, 0, 0, width/2, height/2);
   popMatrix();
   pushMatrix();
- // rotate(second());
-// scale(.2);
-  image(img2, width/2, 0, width/2,height/2);
+  // rotate(second());
+  // scale(.2);
+  image(img2, width/2, 0, width/2, height/2);
   popMatrix();
-  image(img3, 0, height/2, width/2,height/2);
+  image(img3, 0, height/2, width/2, height/2);
   filter(INVERT);
-  image(img4, width/2,height/2, width/2,height/2);
+  image(img4, width/2, height/2, width/2, height/2);
 }
