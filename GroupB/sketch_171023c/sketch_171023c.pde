@@ -1,5 +1,5 @@
 PImage maze;
-int x = 0;
+int x = 191;
 int y = 0;
 int dx = 1;
 int dy = 1;
@@ -12,10 +12,14 @@ void setup() {
 void draw() {
   background(0);
   image(maze, 0, 0, width, height);
-  float R =red(get(mouseX, mouseY));
-  float G =green(get(mouseX, mouseY));
-  float B =blue(get(mouseX, mouseY));
-  println("Red ", R, "Green ", G, "Blue ", B);
+  float R =red(get(x, y));
+  float G =green(get(x, y));
+  float B =blue(get(x, y));
+  if (R<255 || G<255 || B<255) {
+   x = 191;
+   y = 0;
+  }
+  println("Red ", R, "Green ", G, "Blue ", B, "mouseX ",mouseX, "mouseY ", mouseY);
   if (keyPressed == true) {
     if (key == CODED) {
       if (keyCode == UP) {
@@ -34,6 +38,6 @@ void draw() {
       }
     }
   }
-  ellipse(x,y,20,20);
-  
+  fill(255,0,0);
+  ellipse(x, y, 5, 5);
 }
