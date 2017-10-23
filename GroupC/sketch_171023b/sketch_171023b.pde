@@ -13,7 +13,7 @@ void setup() {
 void draw() {
   background(255, 255, 255);
   image(myImage, 0, 0, width, height);
-  float R =  red(get(mouseX, mouseY));
+  float R =  red(get( mouseX, mouseY));
   float G =  green(get(mouseX, mouseY));
   float B =  blue(get(mouseX, mouseY));
   if (keyPressed == true) {
