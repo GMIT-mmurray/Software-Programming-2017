@@ -30,12 +30,12 @@ void draw() {
   //Pumkin
   drawPunkin();
   x = x+dx;     
-  y = y+dx;
+  y = y+dy;
   //pumkin move
   if ((x <= 0)||(x >= 200)) {
     dx = dx*-1;
   }
-  if ((y <= 0)||(y >= height)) {
+  if ((y <= 0)||(y >= 350)) {
     dy = dy*-1;
   }
   //Moon
