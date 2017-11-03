@@ -5,7 +5,7 @@ int dy = 1;
 
 void setup() {
   size(500, 500);
-  frameRate(60);
+  frameRate(160);
 }
 
 void draw() {
