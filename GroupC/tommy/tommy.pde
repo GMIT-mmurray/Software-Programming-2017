@@ -1,4 +1,4 @@
-String myString="";
+String myString=" ";
 String dispTime;
 PFont myFont;
 PImage img1;
