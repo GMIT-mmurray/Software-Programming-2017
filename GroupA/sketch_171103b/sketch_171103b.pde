@@ -13,6 +13,10 @@ String mystring1 = "";
 String mystring2 = "";
 String mystring = "";
 String mystring3;
+int startTime;
+int displayTime = 5000;
+int stopTime;
+boolean hitWall = false;
 
 PFont myfont;
 void setup() {
@@ -42,36 +46,46 @@ void draw() {
     drawBadMoon();
   }
 
-  println(" a",a, "  b",b);
+  println(" a", a, "  b", b);
   //moon hit of wall
   fill(#FFFFFF);
   //moon hit notice
   if (a < 50) {
-     a =50;
+    a =50;
+    hitWall = true;
     //    textFont(myfont);
     mystring3 = "Moon Hit Left";
-    text(mystring3, width/2, height/2);
-    //delay(5000);
+    startTime = millis();
+    stopTime = startTime+displayTime;
   }
   if (a > 550) {
-     a = 550;
+    a = 550;
+    hitWall = true;
     //    textFont(myfont);
     mystring3 = "Moon Hit Right";
-    text(mystring3, width/2, height/2);
-    //delay(5000);
+    startTime = millis();
+    stopTime = startTime+displayTime;
   }
   if (b <50) {
-     b = 50;
+    b = 50;
+    hitWall = true;
     //    textFont(myfont);
     mystring3 = "Moon Hit Top";
-    text(mystring3, width/2, height/3);
-    //delay(5000);
+    startTime = millis();
+    stopTime = startTime+displayTime;
   }
   if (b >= 550) {
-      b=550;
+    b=550;
+    hitWall = true;
     //    textFont(myfont);
     mystring3 = "Moon Hit Bottom";
-    text(mystring3, width/2, height/3);
-    //delay(5000);
+    startTime = millis();
+    stopTime = startTime+displayTime;
+  }
+  if (hitWall == true && millis() < stopTime) {
+    textSize(20);
+    text(mystring3, 300,300);
+  } else {
+    hitWall = false;  
   }
 }
