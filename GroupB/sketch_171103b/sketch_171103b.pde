@@ -3,10 +3,8 @@ int y = 200;
 int dx = 1;
 int dy = 1;
 PImage BG;
-String Up = " Up ";
-String Bottom = " Bottom ";
-String Left = " Left ";
-String Right = " Right ";
+String myString = "";
+
 PFont font;
 int startTime;
 int displayTime = 5000;
@@ -36,36 +34,34 @@ void draw() {
     x = width-135;
     hit = true;
     startTime = millis();
+    myString = "RIGHT";
   }
   if (x < 125) {
     x = 125;
-    textAlign(CENTER);
-    //   textFont(font);
-    textSize(50);
-    text(Left, width/2, height-20);
+    hit = true;
+    startTime = millis();
+    myString = "LEFT";
   }
 
   if (y > height-282) {
     y = height-282;
-    //    textFont(font);
-    textAlign(CENTER);
-    textSize(50);
-    text(Bottom, width/2, height-20);
+    hit = true;
+    startTime = millis();
+    myString = "BOTTOM";
   }
 
   if (y < 116) {
     y = 116 ;
-    //    textFont(font);
-    textAlign(CENTER);
-    textSize(50);
-    text(Up, width/2, height-20);
+    hit = true;
+    startTime = millis();
+    myString = "UP";
   }
 
   if (hit == true && millis() < startTime+displayTime) {
     textAlign(CENTER);
     //   textFont(font);
     textSize(50);
-    text(Right, width/2, height-20);
+    text(myString, width/2, height-20);
   } else {
     hit = false;
   }
