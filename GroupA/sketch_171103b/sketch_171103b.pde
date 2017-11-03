@@ -12,6 +12,7 @@ int db = 1;
 String mystring1 = "";
 String mystring2 = "";
 String mystring = "";
+String mystring3;
 
 PFont myfont;
 void setup() {
@@ -21,18 +22,7 @@ void setup() {
 }
 void draw() {
   background(#000000);
-  //date and time
-  String mystring1 = "Time:" + hour()+ ":" + minute() + ":" + second();
-  //textAlign(CENTER);
-  textSize(20);
-  text(mystring1, width/2, height/8);
-  String mystring2 = "Date:" + day() + "," + month() + "," + year();
-  textSize(20);
-  text(mystring2, width/2, height/6);
-  String mystring3;
-  textAlign(CENTER);
-  textSize(20);
-
+  displayDateAndTime();
   //Pumkin
   drawPunkin();
   x = x+dx;     
@@ -52,39 +42,33 @@ void draw() {
     drawBadMoon();
   }
 
-
+  println(" a",a, "  b",b);
   //moon hit of wall
   fill(#FFFFFF);
-  if ((a <= 50) || (a >= 550)) {
-    da = da*-1;
-  }
-  if ((b <= 50) || (b >=550)) {
-    db = db*-1;
-  }
   //moon hit notice
-  if (a <= 50) {
-
+  if (a < 50) {
+     a =50;
     //    textFont(myfont);
     mystring3 = "Moon Hit Left";
     text(mystring3, width/2, height/2);
     //delay(5000);
   }
-  if (a >= 550) {
-
+  if (a > 550) {
+     a = 550;
     //    textFont(myfont);
     mystring3 = "Moon Hit Right";
     text(mystring3, width/2, height/2);
     //delay(5000);
   }
-  if (b <=50) {
-
+  if (b <50) {
+     b = 50;
     //    textFont(myfont);
     mystring3 = "Moon Hit Top";
     text(mystring3, width/2, height/3);
     //delay(5000);
   }
   if (b >= 550) {
-
+      b=550;
     //    textFont(myfont);
     mystring3 = "Moon Hit Bottom";
     text(mystring3, width/2, height/3);
