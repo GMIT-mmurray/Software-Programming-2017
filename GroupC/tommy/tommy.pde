@@ -11,6 +11,8 @@ int displayTime = 5000;
 boolean wallHit = false;
 
 
+
+
 void setup() {
   size(600, 600);
   //frameRate(100);
