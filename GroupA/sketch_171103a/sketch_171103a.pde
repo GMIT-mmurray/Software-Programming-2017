@@ -5,6 +5,7 @@ int dy=1;
 
 void setup() {
   size(400,400);
+  frameRate(10);
 }
 
 
