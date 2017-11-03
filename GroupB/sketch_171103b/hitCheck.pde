@@ -1,5 +1,5 @@
 void hitCheck() {
-    if (x > width-135) {
+  if (x > width-135) {
     x = width-135;
     hit = true;
     startTime = millis();
