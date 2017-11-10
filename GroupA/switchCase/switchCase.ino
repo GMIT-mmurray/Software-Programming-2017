@@ -51,29 +51,32 @@ void loop() {
   switch (range) {
     case 0:    // your hand is on the sensor
       Serial.println("dark");
-      LEDS(HIGH,LOW,LOW,LOW);
+      LEDS(HIGH, LOW, LOW, LOW);
       break;
     case 1:    // your hand is close to the sensor
       Serial.println("dim");
-      LEDS(LOW,HIGH,LOW,LOW);
+      LEDS(LOW, HIGH, LOW, LOW);
       break;
     case 2:    // your hand is a few inches from the sensor
       Serial.println("medium");
-      LEDS(LOW,LOW,HIGH,LOW);
+      LEDS(LOW, LOW, HIGH, LOW);
       break;
     case 3:    // your hand is nowhere near the sensor
       Serial.println("bright");
-      LEDS(LOW,LOW,LOW,HIGH);
+      LEDS(LOW, LOW, LOW, HIGH);
+      break;
+    default :
+      LEDS(HIGH, HIGH, HIGH, HIGH);
       break;
   }
   delay(1);        // delay in between reads for stability
 }
 
-void LEDS (int x, int y,int w, int z) {
-   digitalWrite(P2,x);
-   digitalWrite(P3,y);
-   digitalWrite(P4,w);
-   digitalWrite(P5,z);
+void LEDS (int x, int y, int w, int z) {
+  digitalWrite(P2, x);
+  digitalWrite(P3, y);
+  digitalWrite(P4, w);
+  digitalWrite(P5, z);
 }
 
 
