@@ -11,9 +11,16 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
-  for (int i = 0; i < 6; i++) {
-    digitalWrite(pinArray[i], HIGH);
-    delay(timeOut[i]);
-    digitalWrite(pinArray[i], LOW);
+  if (Serial.available() > 0) {
+    int data = Serial.read();
+    Serial.println(data);
+    if (data == 48) {
+      for (int i = 0; i < 6; i++) {
+        digitalWrite(pinArray[i], HIGH);
+        delay(timeOut[i]);
+        digitalWrite(pinArray[i], LOW);
+      }
+    }
   }
 }
+
