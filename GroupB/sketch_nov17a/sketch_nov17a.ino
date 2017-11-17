@@ -39,15 +39,7 @@ void loop() {
            blinkLED(5);
           break;
         }
-         case '6': {
-           blinkLED(6);
-          break;
-        }
-         case '7': {
-           blinkLED(7);
-          break;
-        }
-    }
+     }
   }
 }
 void blinkLED(int pin) {
