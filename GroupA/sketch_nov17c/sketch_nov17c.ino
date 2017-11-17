@@ -14,31 +14,8 @@ void loop() {
   if (Serial.available() > 0) {
     int data = Serial.read();
     Serial.println(data);
-    switch (data) {
-      case '0': {
-          blinkLED(0);
-          break;
-        }
-      case 49: {
-          blinkLED(1);
-          break;
-        }
-      case 50: {
-          blinkLED(2);
-          break;
-        }
-      case '3': {
-          blinkLED(3);
-          break;
-        }
-      case '4': {
-          blinkLED(4);
-          break;
-        }
-      case '5': {
-          blinkLED(5);
-          break;
-        }
+    if (data > 47 && data < '6') {
+      blinkLED(data-48);
     }
   }
 }
