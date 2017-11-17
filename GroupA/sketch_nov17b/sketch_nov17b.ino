@@ -14,19 +14,38 @@ void loop() {
   if (Serial.available() > 0) {
     int data = Serial.read();
     Serial.println(data);
-    switch(data) {
-      case 48:{
-      digitalWrite(pinArray[0], HIGH);
-      delay(timeOut[0]);
-      digitalWrite(pinArray[0], LOW);
-      break;
-      }
-    case 49:{
-      digitalWrite(pinArray[1], HIGH);
-      delay(timeOut[1]);
-      digitalWrite(pinArray[1], LOW);
-      break;
-      }
+    switch (data) {
+      case 48: {
+          blinkLED(0);
+          break;
+        }
+      case 49: {
+          blinkLED(1);
+          break;
+        }
+      case 50: {
+          blinkLED(2);
+          break;
+        }
+      case '3': {
+          blinkLED(3);
+          break;
+        }
+      case '4': {
+          blinkLED(4);
+          break;
+        }
+      case '5': {
+          blinkLED(5);
+          break;
+        }
     }
   }
 }
+
+void blinkLED(int pin) {
+  digitalWrite(pinArray[pin], HIGH);
+  delay(timeOut[pin]);
+  digitalWrite(pinArray[pin], LOW);
+}
+
