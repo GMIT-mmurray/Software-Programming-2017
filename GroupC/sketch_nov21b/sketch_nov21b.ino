@@ -15,11 +15,10 @@ void setup() {
 }
 
 void loop() {
-  while (Serial.available() > 0) {
+  if (Serial.available() > 0) {
     // look for the next valid integer in the incoming serial stream:
-    int red = Serial.parseInt();
-    // constrain the values to 0 - 255 and invert
-    // if you're using a common-cathode LED, just use "constrain(color, 0, 255);"
-    Serial.println(red);
+    int steps = Serial.parseInt();
+    Serial.println(steps/1.8);
+    myStepper.step(steps/1.8);
   }
 } // end loop
