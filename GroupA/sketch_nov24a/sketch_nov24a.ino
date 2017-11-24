@@ -4,6 +4,8 @@ int b1PresValue = 0;
 int b1PrevValue = 0;
 int b2PresValue = 1;
 int b2PrevValue = 1;
+int counter = 0;
+
 void setup() {
   // put your setup code here, to run once:
   pinMode(button1, INPUT);
@@ -19,7 +21,8 @@ void loop() {
     // if the current vcalue is HIGH then the button
     // went from low to high:
     if (b1PresValue == HIGH) {
-      Serial.println(" Gone HIGH ");
+      counter++;
+      Serial.println(counter);
     }
   }
   // save the current value into previous value,
@@ -33,7 +36,8 @@ void loop() {
     // if the current value is LOW then the button
     // went from low to high:
     if (b2PresValue == LOW) {
-      Serial.println(" Gone LOW ");
+      counter--;
+      Serial.println(counter);
     }
   }
   // save the current value into previous value,
