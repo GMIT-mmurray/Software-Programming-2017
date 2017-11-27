@@ -19,28 +19,28 @@ void loop() {
   int bit2 = digitalRead(pinInputs[2]);
 
   if (bit0 == LOW && bit1 == LOW && bit2 == LOW) {
-
+   LEDOutputs(HIGH,LOW,LOW,LOW,LOW,LOW,LOW,LOW);
   }
   if (bit0 == HIGH && bit1 == LOW && bit2 == LOW) {
-
+   LEDOutputs(LOW,HIGH,LOW,LOW,LOW,LOW,LOW,LOW);
   }
   if (bit0 == LOW && bit1 == HIGH && bit2 == LOW) {
-
+  LEDOutputs(LOW,LOW,HIGH,LOW,LOW,LOW,LOW,LOW);
   }
   if (bit0 == HIGH && bit1 == HIGH && bit2 == LOW) {
-
+  LEDOutputs(LOW,LOW,LOW,HIGH,LOW,LOW,LOW,LOW);
   }
   if (bit0 == LOW && bit1 == LOW && bit2 == HIGH) {
-
+  LEDOutputs(LOW,LOW,LOW,LOW,HIGH,LOW,LOW,LOW);
   }
   if (bit0 == HIGH && bit1 == LOW && bit2 == HIGH) {
-
+  LEDOutputs(LOW,LOW,LOW,LOW,LOW,HIGH,LOW,LOW);
   }
   if (bit0 == LOW && bit1 == HIGH && bit2 == HIGH) {
-
+  LEDOutputs(LOW,LOW,LOW,LOW,LOW,LOW,HIGH,LOW);
   }
   if (bit0 == HIGH && bit1 == HIGH && bit2 == HIGH) {
-
+  LEDOutputs(LOW,LOW,LOW,LOW,LOW,LOW,LOW,HIGH);
   }
 }
 
