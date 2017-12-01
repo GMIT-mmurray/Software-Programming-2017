@@ -45,7 +45,7 @@ void loop() {
   if (bit0 == 1 && bit1 == 1 && bit2 == 1) {
     digitalWrite(pinOutputs[7], HIGH);
   }
-
+ delay(300);
 }
 
 
