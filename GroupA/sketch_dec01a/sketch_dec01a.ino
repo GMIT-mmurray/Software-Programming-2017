@@ -5,14 +5,15 @@ void setup() {
   // put your setup code here, to run once:
   Serial.begin(9600);
   for (int i = 0; i < 8; i++) {
-    pinMode(pinOutputs[i],OUTPUT);
+    pinMode(pinOutputs[i], OUTPUT);
   }
   for (int i = 0; i < 3; i++) {
-    pinMode(pinInputs[i],INPUT);
+    pinMode(pinInputs[i], INPUT);
   }
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
-
+  int bit0 = digitalRead(pinInputs[0]);
+  int bit1 = digitalRead(pinInputs[1]);
+  int bit2 = digitalRead(pinInputs[2]);
 }
