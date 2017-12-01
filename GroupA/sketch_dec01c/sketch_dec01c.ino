@@ -13,44 +13,39 @@ void setup() {
 }
 
 void loop() {
+  for (int i = 0; i < 8; i++) {
+    digitalWrite(pinOutputs[i], LOW);
+  }
+
   int bit0 = digitalRead(pinInputs[0]);
   int bit1 = digitalRead(pinInputs[1]);
   int bit2 = digitalRead(pinInputs[2]);
 
   if (bit0 == 0 && bit1 == 0 && bit2 == 0) {
-    switchLEDS(0, 0, 0, 0, 0, 0, 0, 1);
+    digitalWrite(pinOutputs[0], HIGH);
   }
   if (bit0 == 1 && bit1 == 0 && bit2 == 0) {
-    switchLEDS(0, 0, 0, 0, 0, 0, 1, 0);
+    digitalWrite(pinOutputs[1], HIGH);
   }
   if (bit0 == 0 && bit1 == 1 && bit2 == 0) {
-    switchLEDS(0, 0, 0, 0, 0, 1, 0, 0);
+    digitalWrite(pinOutputs[2], HIGH);
   }
   if (bit0 == 1 && bit1 == 1 && bit2 == 0) {
-    switchLEDS(0, 0, 0, 0, 1, 0, 0, 0);
+    digitalWrite(pinOutputs[3], HIGH);
   }
-   if (bit0 == 0 && bit1 == 0 && bit2 == 1) {
-    switchLEDS(0, 0, 0, 1, 0, 0, 0, 0);
+  if (bit0 == 0 && bit1 == 0 && bit2 == 1) {
+    digitalWrite(pinOutputs[4], HIGH);
   }
   if (bit0 == 1 && bit1 == 0 && bit2 == 1) {
-    switchLEDS(0, 0, 1, 0, 0, 0, 0, 0);
+    digitalWrite(pinOutputs[5], HIGH);
   }
   if (bit0 == 0 && bit1 == 1 && bit2 == 1) {
-    switchLEDS(0, 1, 0, 0, 0, 0, 0, 0);
+    digitalWrite(pinOutputs[6], HIGH);
   }
   if (bit0 == 1 && bit1 == 1 && bit2 == 1) {
-    switchLEDS(1, 0, 0, 0, 0, 0, 0, 0);
+    digitalWrite(pinOutputs[7], HIGH);
   }
+
 }
 
-void switchLEDS(int LED7, int LED6, int LED5, int LED4, int LED3, int LED2, int LED1, int LED0) {
-  digitalWrite(pinOutputs[0], LED0);
-  digitalWrite(pinOutputs[1], LED1);
-  digitalWrite(pinOutputs[2], LED2);
-  digitalWrite(pinOutputs[3], LED3);
-  digitalWrite(pinOutputs[4], LED4);
-  digitalWrite(pinOutputs[5], LED5);
-  digitalWrite(pinOutputs[6], LED6);
-  digitalWrite(pinOutputs[7], LED7);
-}
 
