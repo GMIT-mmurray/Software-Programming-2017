@@ -38,65 +38,65 @@ void loop() {
     digitalWrite(pinOutputs[6], LOW);
     digitalWrite(pinOutputs[7], LOW);
   }
-    if (bit0 == 0 && bit1 == 0 && bit2 == 0) {
-    digitalWrite(pinOutputs[0], HIGH);
+    if (bit0 == 0 && bit1 == 1 && bit2 == 0) {
+    digitalWrite(pinOutputs[0], LOW);
     digitalWrite(pinOutputs[1], LOW);
-    digitalWrite(pinOutputs[2], LOW);
+    digitalWrite(pinOutputs[2], HIGH);
     digitalWrite(pinOutputs[3], LOW);
     digitalWrite(pinOutputs[4], LOW);
     digitalWrite(pinOutputs[5], LOW);
     digitalWrite(pinOutputs[6], LOW);
     digitalWrite(pinOutputs[7], LOW);
   }
-    if (bit0 == 0 && bit1 == 0 && bit2 == 0) {
-    digitalWrite(pinOutputs[0], HIGH);
+    if (bit0 == 1 && bit1 == 1 && bit2 == 0) {
+    digitalWrite(pinOutputs[0], LOW);
     digitalWrite(pinOutputs[1], LOW);
     digitalWrite(pinOutputs[2], LOW);
-    digitalWrite(pinOutputs[3], LOW);
+    digitalWrite(pinOutputs[3], HIGH);
     digitalWrite(pinOutputs[4], LOW);
     digitalWrite(pinOutputs[5], LOW);
     digitalWrite(pinOutputs[6], LOW);
     digitalWrite(pinOutputs[7], LOW);
   }
-    if (bit0 == 0 && bit1 == 0 && bit2 == 0) {
-    digitalWrite(pinOutputs[0], HIGH);
+    if (bit0 == 0 && bit1 == 0 && bit2 == 1) {
+    digitalWrite(pinOutputs[0], LOW);
     digitalWrite(pinOutputs[1], LOW);
     digitalWrite(pinOutputs[2], LOW);
     digitalWrite(pinOutputs[3], LOW);
-    digitalWrite(pinOutputs[4], LOW);
+    digitalWrite(pinOutputs[4], HIGH);
     digitalWrite(pinOutputs[5], LOW);
     digitalWrite(pinOutputs[6], LOW);
     digitalWrite(pinOutputs[7], LOW);
   }
-    if (bit0 == 0 && bit1 == 0 && bit2 == 0) {
-    digitalWrite(pinOutputs[0], HIGH);
+    if (bit0 == 1 && bit1 == 0 && bit2 == 1) {
+    digitalWrite(pinOutputs[0], LOW);
     digitalWrite(pinOutputs[1], LOW);
     digitalWrite(pinOutputs[2], LOW);
     digitalWrite(pinOutputs[3], LOW);
     digitalWrite(pinOutputs[4], LOW);
-    digitalWrite(pinOutputs[5], LOW);
+    digitalWrite(pinOutputs[5], HIGH);
     digitalWrite(pinOutputs[6], LOW);
     digitalWrite(pinOutputs[7], LOW);
   }
-    if (bit0 == 0 && bit1 == 0 && bit2 == 0) {
-    digitalWrite(pinOutputs[0], HIGH);
+    if (bit0 == 0 && bit1 == 1 && bit2 == 1) {
+    digitalWrite(pinOutputs[0], LOW);
     digitalWrite(pinOutputs[1], LOW);
     digitalWrite(pinOutputs[2], LOW);
     digitalWrite(pinOutputs[3], LOW);
     digitalWrite(pinOutputs[4], LOW);
     digitalWrite(pinOutputs[5], LOW);
-    digitalWrite(pinOutputs[6], LOW);
+    digitalWrite(pinOutputs[6], HIGH);
     digitalWrite(pinOutputs[7], LOW);
   }
-    if (bit0 == 0 && bit1 == 0 && bit2 == 0) {
-    digitalWrite(pinOutputs[0], HIGH);
+    if (bit0 == 1 && bit1 == 1 && bit2 == 1) {
+    digitalWrite(pinOutputs[0], LOW);
     digitalWrite(pinOutputs[1], LOW);
     digitalWrite(pinOutputs[2], LOW);
     digitalWrite(pinOutputs[3], LOW);
     digitalWrite(pinOutputs[4], LOW);
     digitalWrite(pinOutputs[5], LOW);
     digitalWrite(pinOutputs[6], LOW);
-    digitalWrite(pinOutputs[7], LOW);
+    digitalWrite(pinOutputs[7], HIGH);
   }
 
 }
